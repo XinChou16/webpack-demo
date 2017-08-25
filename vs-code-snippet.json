@@ -1,0 +1,129 @@
+{
+/*
+	// Place your snippets for JavaScript here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	"Print to console": {
+		"prefix": "log",
+		"body": [
+			"console.log('$1');",
+			"$2"
+		],
+		"description": "Log output to console"
+	}
+*/
+
+	"consoleLog": {
+		"prefix": "c",
+		"body": "console.log(${1:msg呀});",
+		"description": "Displays a message in the console"
+	},
+	"addInfo": {
+		"prefix": "a",
+		"body": "// ${1:addInfo}",
+		"description": "添加备注"
+	},
+	
+
+	// 变量声明
+	"varStatement": {
+		"prefix": "v=",
+		"body": "var ${1:name} = ${2:value};",
+		"description": "var statement"
+	},
+	"letAssignment": {
+		"prefix": "l=",
+		"body": "let ${1:name} = ${2:value};",
+		"description": "let assignment"
+	},
+	"constAssignment": {
+		"prefix": "c=",
+		"body": "const ${1:name} = ${2:value};",
+		"description": "const assignment"
+	},
+
+	// 函数
+	"namedFunction": {
+		"prefix": "f",
+		"body": "function ${1:methodName} (${2:arguments}) {\n\t${0}\n}",
+		"description": "Creates a named function in ES6 syntax"
+	},
+	// 回调函数
+	"anonymousFunction": {
+		"prefix": "f=",
+		"body": "function (${1:arguments}) {\n\t${0}\n}",
+		"description": "Creates an anonymous function in ES6 syntax"
+	},
+
+	// 循环
+	"forLoop": {
+		"prefix": "fl",
+		"body": "for (let ${1:j} = 0; ${1:j} < ${2:iterable}${3:.length}; ${1:j}++) {\n  ${4}\n}",
+		"description": "for loop"
+	},
+	"forEach": {
+		"prefix": "fre",
+		"body": "${1:array}.forEach(${2:function (item,index)} {\n\t${0}\n});",
+		"description": "Creates a forEach statement in ES6 syntax"
+	},
+	"forInLoop": {
+		"prefix": "fi",
+		"body": "for (let ${1:key} in ${2:source}) {\n  if (${2:source}.hasOwnProperty(${1:key})) {\n    ${3}\n  }\n}",
+		"description": "for in loop"
+	},
+
+	// 判断
+	"if/elseStatement": {
+		"prefix": "i",
+		"body": "if (${1:condition}) {\n  ${2}\n} else {\n  ${3}\n}",
+		"description": "if/else statement"
+	},
+
+	// 返回
+	"returnThis": {
+		"prefix": "r",
+		"body": "return ${1:this};",
+		"description": "return this"
+	},
+
+	// 对象
+	"key/valuePair": {
+		"prefix": "kv",
+		"body": "${1:key}: ${2:'value'},",
+		"description": "key/value pair"
+	},
+
+	// jQuery
+	"selector": {
+		"prefix": "q",
+		"body": "$('${1:node}')",
+		"description": "key/value pair"
+	},
+	"constArray": {
+		"prefix": "ca",
+		"body": "const ${1:name} = [\n  ${2}\n]",
+		"description": "const array"
+	},
+	"promise": {
+		"prefix": "prom",
+		"body": "return new Promise(function (resolve, reject)  {\n\t${1}\n});",
+		"description": "Creates and returns a new Promise in the standard ES6 syntax"
+	},
+	"setTimeOut": {
+		"prefix": "sto",
+		"body": "setTimeout(function() {\n\t${2}\n}, ${1:delayInms});",
+		"description": "Executes the given function after the specified delay in ES6 syntax"
+	},
+	//   事件
+    "addEventListener": {
+        "prefix": "ae",
+        "body": [
+            "${1:document}.addEventListener('${2:load}', function (e) {",
+            "\t${3:// body}",
+            "});"
+        ],
+        "description": "Code snippet for \"addEventListener\""
+	}
+}
